@@ -1,0 +1,16 @@
+class Solution {
+    public int getSecondLargest(int[] arr) {
+        // code here
+        int fLargest = -1;
+        int sLargest = -1;
+        for(int i : arr){
+            if(i>fLargest){
+                sLargest = fLargest;
+                fLargest = i;
+            }else if(i >sLargest && i!= fLargest){
+                sLargest = i;
+            }
+        }
+        return sLargest;
+    }
+}
