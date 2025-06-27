@@ -1,0 +1,21 @@
+class Solution {
+    int thirdLargest(int arr[]) {
+        // Your code here
+        int fLarge = -1;
+        int sLarge = -1;
+        int tLarge = -1;
+        for(int i : arr){
+            if(i>= fLarge){
+                tLarge = sLarge;
+                sLarge = fLarge;
+                fLarge = i;
+            }else if(i>= sLarge){
+                tLarge = sLarge;
+                sLarge = i;
+            }else if (i >= tLarge){
+                tLarge = i;
+            }
+        }
+        return tLarge;
+    }
+}
