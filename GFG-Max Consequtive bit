@@ -1,0 +1,23 @@
+class Solution {
+    public int maxConsecBits(int[] arr) {
+        // code here
+        int max1 = 0;
+        int max2 = 0;
+        int countOne = 0;
+        int countZero = 0;
+        for(int i : arr){
+            if(i == 1){
+                countZero = 0;
+                countOne++;
+                max1 = Math.max(max1,countOne);
+            }
+            else{
+                countOne = 0;
+                countZero++;
+                max2 = Math.max(max2,countZero);
+            }
+            max1 = Math.max(max1,max2);
+        }
+        return max1;
+    }
+}
