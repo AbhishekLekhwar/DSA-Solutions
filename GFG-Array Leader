@@ -1,6 +1,7 @@
 class Solution {
     static ArrayList<Integer> leaders(int arr[]) {
         // code here
+// Array Leader is the element which greater than its right side element ,last element always leader
         ArrayList<Integer> list = new ArrayList<>();
         int max = Integer.MIN_VALUE;
         int n = arr.length;
